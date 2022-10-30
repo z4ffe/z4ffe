@@ -1,0 +1,19 @@
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22%;
+  font-family: "Poppins", sans-serif;
+}
+.aboutme .text {
+  color: rgba(219, 217, 232, 0.8);
+  letter-spacing: 1px;
+}
+.aboutme .border {
+  margin-top: 40px;
+  margin-left: auto;
+  width: 30%;
+  height: 1px;
+  background-color: rgba(219, 217, 232, 0.2);
+}
+
+/*# sourceMappingURL=AboutMe.module.css.map */

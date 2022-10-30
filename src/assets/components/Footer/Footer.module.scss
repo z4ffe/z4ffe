@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  margin-top: 50px;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 75%;
+    justify-content: space-between;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #4C4968;
+  transition: .5s ease;
+
+  &:hover {
+    color: whitesmoke;
+  }
+}

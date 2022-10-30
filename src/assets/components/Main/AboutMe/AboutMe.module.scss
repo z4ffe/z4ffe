@@ -1,0 +1,19 @@
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22%;
+  font-family: 'Poppins', sans-serif;
+
+  .text {
+    color: rgba(219, 217, 232, .8);
+    letter-spacing: 1px;
+  }
+
+  .border {
+    margin-top: 40px;
+    margin-left: auto;
+    width: 30%;
+    height: 1px;
+    background-color: rgba(219, 217, 232, .2);
+  }
+}

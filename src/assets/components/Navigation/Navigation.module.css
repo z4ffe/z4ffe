@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+.nav ul {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0;
+  margin-top: 40px;
+}
+.nav ul li {
+  transition: 0.4s ease;
+}
+.nav ul li:not(:first-child) {
+  margin-top: 20px;
+}
+.nav ul li a {
+  display: block;
+  color: rgba(219, 217, 232, 0.8);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav ul li a:hover {
+  color: #D1ED42;
+  transform: translateX(20px);
+}
+.nav ul li .active {
+  color: #D1ED42;
+  transform: translateX(20px);
+}
+
+/*# sourceMappingURL=Navigation.module.css.map */
