@@ -1,5 +1,18 @@
 [
   {
+    "title": "Daily News",
+    "img": "/img/portfolio/daily-news.jpg",
+    "github": "https://github.com/z4ffe/react-daily-news",
+    "pages": "https://github.com/z4ffe/react-daily-news",
+    "html": true,
+    "sass": true,
+    "bootstrap": false,
+    "js": true,
+    "react": true,
+    "node": true,
+    "db": true
+  },
+  {
     "title": "Type Racer",
     "img": "/img/portfolio/type-racer.jpg",
     "github": "https://github.com/z4ffe/type-racer",
