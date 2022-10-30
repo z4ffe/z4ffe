@@ -1,12 +1,13 @@
 [
   {
     "title": "Daily News",
+    "desc": "",
     "img": "/img/portfolio/daily-news.jpg",
     "github": "https://github.com/z4ffe/react-daily-news",
-    "pages": "https://github.com/z4ffe/react-daily-news",
+    "pages": "https://react-daily-news.herokuapp.com",
     "html": true,
     "sass": true,
-    "bootstrap": false,
+    "bootstrap": true,
     "js": true,
     "react": true,
     "node": true,
@@ -14,6 +15,7 @@
   },
   {
     "title": "Type Racer",
+    "desc": "",
     "img": "/img/portfolio/type-racer.jpg",
     "github": "https://github.com/z4ffe/type-racer",
     "pages": "https://z4ffe.github.io/type-racer",
@@ -27,6 +29,7 @@
   },
   {
     "title": "iOS Style Calculator",
+    "desc": "",
     "img": "/img/portfolio/ios-style-calc.jpg",
     "github": "https://github.com/z4ffe/ios-style-calc",
     "pages": "https://z4ffe.github.io/ios-style-calc/",
@@ -40,6 +43,7 @@
   },
   {
     "title": "ToDo List",
+    "desc": "",
     "img": "/img/portfolio/todo-list.jpg",
     "github": "https://github.com/z4ffe/ios-style-todo-react",
     "pages": "https://z4ffe.github.io/ios-style-todo-react",
@@ -53,6 +57,7 @@
   },
   {
     "title": "Who Pays The Bill?",
+    "desc": "",
     "img": "/img/portfolio/wptb.jpg",
     "github": "https://github.com/z4ffe/who-pays-the-bill",
     "pages": "https://z4ffe.github.io/who-pays-the-bill",
@@ -66,6 +71,7 @@
   },
   {
     "title": "Freebie Landing",
+    "desc": "",
     "img": "/img/portfolio/freebie.jpg",
     "github": "https://github.com/z4ffe/freebie-landing",
     "pages": "https://z4ffe.github.io/freebie-landing",
@@ -79,6 +85,7 @@
   },
   {
     "title": "Rock Paper Scissor",
+    "desc": "",
     "img": "/img/portfolio/rps-game.jpg",
     "github": "https://github.com/z4ffe/rps-game",
     "pages": "https://z4ffe.github.io/rps-game",
@@ -92,6 +99,7 @@
   },
   {
     "title": "Travel Landing",
+    "desc": "",
     "img": "/img/portfolio/travel-landing.jpg",
     "github": "https://github.com/z4ffe/Travel",
     "pages": "https://z4ffe.github.io/Travel",
@@ -105,6 +113,7 @@
   },
   {
     "title": "Grocery Store",
+    "desc": "",
     "img": "/img/portfolio/grocery-store.jpg",
     "github": "https://github.com/z4ffe/Grocery-Store",
     "pages": "https://z4ffe.github.io/Grocery-Store",
@@ -118,6 +127,7 @@
   },
   {
     "title": "Flowers Store",
+    "desc": "",
     "img": "/img/portfolio/flowers-landing.jpg",
     "github": "https://github.com/z4ffe/Flowers-landing",
     "pages": "https://z4ffe.github.io/Flowers-landing",
