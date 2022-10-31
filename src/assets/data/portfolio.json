@@ -1,8 +1,8 @@
 [
   {
-    "title": "Daily News",
+    "title": "Tech News",
     "desc": "",
-    "img": "/img/portfolio/daily-news.jpg",
+    "img": "/img/portfolio/tech-news.png",
     "github": "https://github.com/z4ffe/react-daily-news",
     "pages": "https://react-daily-news.herokuapp.com",
     "html": false,
