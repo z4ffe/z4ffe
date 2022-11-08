@@ -10,6 +10,20 @@
     "bootstrap": true,
     "js": true,
     "react": true,
+    "node": false,
+    "db": false
+  },
+  {
+    "title": "Todo App - MERN",
+    "desc": "",
+    "img": "/img/portfolio/todo-list.png",
+    "github": "https://github.com/z4ffe/todo-app",
+    "pages": "https://todo-app-ios.vercel.app/",
+    "html": false,
+    "sass": true,
+    "bootstrap": true,
+    "js": true,
+    "react": true,
     "node": true,
     "db": true
   },
@@ -38,20 +52,6 @@
     "bootstrap": false,
     "js": true,
     "react": false,
-    "node": false,
-    "db": false
-  },
-  {
-    "title": "ToDo List",
-    "desc": "",
-    "img": "/img/portfolio/todo-list.jpg",
-    "github": "https://github.com/z4ffe/ios-style-todo-react",
-    "pages": "https://z4ffe.github.io/ios-style-todo-react",
-    "html": false,
-    "sass": true,
-    "bootstrap": false,
-    "js": true,
-    "react": true,
     "node": false,
     "db": false
   },
