@@ -16,4 +16,46 @@ body {
   margin: 130px 0 0 320px;
 }
 
+.icons {
+  margin-right: 0.5rem;
+  color: rgba(219, 217, 232, 0.8);
+}
+
+.active_drawer {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  color: #D1ED42;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.5s ease;
+}
+
+.inactive_drawer {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  color: rgba(219, 217, 232, 0.8);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.5s ease;
+}
+.inactive_drawer:hover {
+  color: #D1ED42;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+  .wrapper .content {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .wrapper .menu {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=App.module.css.map */

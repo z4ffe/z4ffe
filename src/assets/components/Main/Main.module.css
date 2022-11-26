@@ -40,7 +40,7 @@
   transition: 0.3s easy;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 300px) and (max-width: 767px) {
   .image1, .image2, .image3 {
     display: none;
   }

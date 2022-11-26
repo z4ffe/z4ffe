@@ -60,3 +60,10 @@
   height: 1px;
   background-color: rgba(219, 217, 232, .2);
 }
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .cv {
+    margin: 0 auto;
+    padding: 0 .5rem;
+  }
+}

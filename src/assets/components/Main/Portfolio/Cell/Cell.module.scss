@@ -73,3 +73,13 @@
     }
   }
 }
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .cell {
+    width: 23.3rem;
+
+    .cell__wrapper {
+      opacity: 1;
+    }
+  }
+}

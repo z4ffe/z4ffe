@@ -15,3 +15,49 @@ body {
   height: 900px;
   margin: 130px 0 0 320px;
 }
+
+.icons {
+  margin-right: .5rem;
+  color: rgba(219, 217, 232, .8)
+}
+
+.active_drawer {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  color: #D1ED42;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: .5s ease;
+}
+
+.inactive_drawer {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  color: rgba(219, 217, 232, .8);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: .5s ease;
+
+  &:hover {
+    color: #D1ED42;
+  }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+
+    .content {
+      margin-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+}

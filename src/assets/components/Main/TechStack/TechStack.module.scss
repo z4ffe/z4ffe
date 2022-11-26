@@ -35,6 +35,7 @@
       height: 50px;
     }
   }
+
   .techstack__third {
     display: flex;
     gap: 20px;
@@ -45,6 +46,7 @@
       object-fit: contain;
     }
   }
+
   .techstack__fourth {
     display: flex;
     gap: 7px;
@@ -56,6 +58,7 @@
       object-fit: contain;
     }
   }
+
   .techstack__fifth {
     display: flex;
     justify-content: center;
@@ -76,4 +79,59 @@
   width: 23%;
   height: 1px;
   background-color: rgba(219, 217, 232, .2);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .techstack {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "header header header header header"
+                          "first second third fourth fifth";
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2%;
+    align-items: start;
+    margin: 2rem auto;
+
+    h2 {
+      margin: 0 auto;
+      display: block;
+      grid-area: header;
+    }
+
+    .techstack__first {
+      flex-direction: column;
+      grid-area: first;
+      align-items: center;
+    }
+
+    .techstack__second {
+      flex-direction: column;
+      grid-area: second;
+      align-items: center;
+    }
+
+    .techstack__third {
+      flex-direction: column;
+      grid-area: third;
+      align-items: center;
+    }
+
+    .techstack__fourth {
+      flex-direction: column;
+      grid-area: fourth;
+      align-items: center;
+    }
+
+    .techstack__fifth {
+      flex-direction: column;
+      grid-area: fifth;
+      align-items: center;
+      width: fit-content;
+    }
+    .border {
+      display: none;
+    }
+  }
 }

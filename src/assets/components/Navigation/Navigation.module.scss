@@ -25,6 +25,7 @@
         color: rgba(219, 217, 232, .8);
         text-decoration: none;
         letter-spacing: 1px;
+        transition: .5s ease;
 
         &:hover {
           color: #D1ED42;
@@ -32,7 +33,6 @@
         }
 
       }
-
       .active {
         color: #D1ED42;
         transform: translateX(20px);
@@ -40,4 +40,3 @@
     }
   }
 }
-

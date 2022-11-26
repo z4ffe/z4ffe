@@ -22,6 +22,7 @@
   color: rgba(219, 217, 232, 0.8);
   text-decoration: none;
   letter-spacing: 1px;
+  transition: 0.5s ease;
 }
 .nav ul li a:hover {
   color: #D1ED42;

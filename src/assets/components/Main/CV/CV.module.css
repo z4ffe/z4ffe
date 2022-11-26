@@ -57,4 +57,11 @@
   background-color: rgba(219, 217, 232, 0.2);
 }
 
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .cv {
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+}
+
 /*# sourceMappingURL=CV.module.css.map */

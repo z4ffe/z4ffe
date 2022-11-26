@@ -1,6 +1,7 @@
 .footer {
   display: flex;
   margin-top: 50px;
+  font-family: "Poppins", sans-serif;
 }
 .footer ul {
   display: flex;
@@ -10,14 +11,45 @@
   width: 75%;
   justify-content: space-between;
 }
-
-a {
+.footer ul li a {
   text-decoration: none;
   color: #4C4968;
   transition: 0.5s ease;
 }
-a:hover {
+.footer ul li a:hover {
   color: whitesmoke;
+}
+.footer .author {
+  display: none;
+  color: rgba(245, 245, 245, 0.22);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #100C31;
+    bottom: 0;
+    gap: 0.2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.2rem;
+  }
+  .footer ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .footer a {
+    text-decoration: none;
+  }
+  .footer .author {
+    display: block;
+    font-size: 0.6rem;
+  }
 }
 
 /*# sourceMappingURL=Footer.module.css.map */
