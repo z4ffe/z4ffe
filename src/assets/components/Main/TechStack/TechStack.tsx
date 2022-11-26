@@ -13,6 +13,8 @@ const TechStack = () => {
                 <img src="/img/tech/css.png" alt="css3"/>
                 <img src="/img/tech/sass.png" alt="scss"/>
                 <img src="/img/tech/bootstrap.png" alt="bootstrap"/>
+                <img src="/img/tech/material.png" alt="material ui"/>
+                <img src="/img/tech/tailwind.svg" alt="tailwind"/>
              </div>
              <div className={styles.techstack__second}>
                 <img src="/img/tech/js.svg"
@@ -28,13 +30,14 @@ const TechStack = () => {
              <div className={styles.techstack__fourth}>
                 <img src="/img/tech/node.png" alt="nodejs"/>
                 <img src="/img/tech/express.png" alt="express"/>
-                <img src="/img/tech/sequelize.png" alt="sequelize"/>
-                <img src="/img/tech/jwt.png" alt="jwt"/>
                 <img src="/img/tech/mongoose.png" alt="mongoose-odm"/>
+                <img src="/img/tech/jwt.png" alt="jwt"/>
+                <img src="/img/tech/sequelize.png" alt="sequelize"/>
              </div>
              <div className={styles.techstack__fifth}>
-                <img src="/img/tech/mongo.png" alt="mongodb"/>
-                <img src="/img/tech/postrgre.png" alt="postgresql"/>
+                <img src="/img/tech/mongodb.webp" alt="mongodb"/>
+                <img src="/img/tech/mysql.png" alt="mysql"/>
+                <img src="/img/tech/postgre.webp" alt="postgresql"/>
              </div>
           </div>
        </AnimatedPage>
