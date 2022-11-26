@@ -4,7 +4,7 @@
     "desc": "",
     "img": "/img/portfolio/tech-news.png",
     "github": "https://github.com/z4ffe/tech-news",
-    "pages": "https://world-tech-news.herokuapp.com/",
+    "pages": "https://world-tech-news.vercel.app/",
     "html": false,
     "sass": true,
     "bootstrap": true,
