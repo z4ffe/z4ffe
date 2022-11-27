@@ -1,5 +1,5 @@
-<h1 align="center">FE from Saint-Petersburg</h1>
-<p align="center"><b>MERN<br>html, css/scss, es6+, ts, react, redux, node, express, mongodb</b></p>
+<h1 align="center">FS from Saint-Petersburg</h1>
+<p align="center"><b>MERN<br>html, sass, es6, ts, react, redux, node, express, mongodb</b></p>
 <h2></h2>
 <div align="center">
  <a href="https://pavelkuliasov.netlify.app">Personal page</a><br>
