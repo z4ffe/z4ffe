@@ -3,6 +3,7 @@
   font-family: 'Lucida Grande', sans-serif;
   user-select: none;
   -webkit-user-select: none;
+  transition: 0.1s;
 
   canvas {
     display: flex;
@@ -17,14 +18,35 @@
     h1 {
       color: white;
       margin: 0 auto;
+      line-height: 0.1rem;
+    }
+
+    h2 {
+      margin-left: 14.7rem;
+      color: white;
+      font-size: 12px;
+      line-height: 0.1rem;
     }
   }
 
-  h2 {
-    left: 35%;
-    top: 10%;
-    color: white;
-    font-size: 12px;
-  }
+}
 
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  #container {
+    .header-container {
+      left: 0;
+      top: 50%;
+      width: 100%;
+
+      h1 {
+        line-height: normal;
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
 }
