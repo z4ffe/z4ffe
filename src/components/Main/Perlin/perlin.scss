@@ -1,0 +1,30 @@
+#container {
+  position: relative;
+  font-family: 'Lucida Grande', sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+
+  canvas {
+    display: flex;
+  }
+
+  .header-container {
+    position: absolute;
+    left: 34%;
+    top: 45%;
+    width: 100%;
+
+    h1 {
+      color: white;
+      margin: 0 auto;
+    }
+  }
+
+  h2 {
+    left: 35%;
+    top: 10%;
+    color: white;
+    font-size: 12px;
+  }
+
+}

@@ -1,6 +1,6 @@
 @font-face {
   font-family: Incompleeta;
-  src: url("../../fonts/IncompleetaRegular.ttf");
+  src: url("../../assets/fonts/IncompleetaRegular.ttf");
 }
 .header {
   display: flex;

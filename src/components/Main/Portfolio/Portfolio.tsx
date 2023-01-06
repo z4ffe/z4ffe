@@ -1,6 +1,6 @@
 import styles from './Portfolio.module.css'
 import AnimatedPage from "../AnimatedPage";
-import data from '../../../data/portfolio.json'
+import data from '../../../assets/data/portfolio.json'
 import Cell from "./Cell/Cell";
 import React from "react";
 

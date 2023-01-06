@@ -1,9 +1,7 @@
 import React, {useEffect, useRef} from 'react';
+import Perlin from "./Perlin/Perlin";
 import AnimatedPage from "./AnimatedPage";
 import styles from './Main.module.css'
-import image1 from '../../image/face/yellow-lines.png'
-import image2 from '../../image/face/red-lines.png'
-import image3 from '../../image/face/blue-lines.png'
 
 const Main = () => {
    const imageOne: any = useRef();
@@ -30,9 +28,7 @@ const Main = () => {
        <AnimatedPage>
           <div className={styles.main}>
              <div className={styles.main_wrapper}>
-                <img ref={imageOne} className={styles.image1} src={image1} alt="photo"/>
-                <img ref={imageTwo} className={styles.image2} src={image2} alt="photo"/>
-                <img ref={imageThree} className={styles.image3} src={image3} alt="photo"/>
+                <Perlin/>
              </div>
           </div>
        </AnimatedPage>

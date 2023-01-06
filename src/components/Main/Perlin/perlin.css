@@ -1,0 +1,27 @@
+#container {
+  position: relative;
+  font-family: "Lucida Grande", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#container canvas {
+  display: flex;
+}
+#container .header-container {
+  position: absolute;
+  left: 34%;
+  top: 45%;
+  width: 100%;
+}
+#container .header-container h1 {
+  color: white;
+  margin: 0 auto;
+}
+#container h2 {
+  left: 35%;
+  top: 10%;
+  color: white;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=perlin.css.map */
