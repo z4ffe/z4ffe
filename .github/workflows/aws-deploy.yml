@@ -24,7 +24,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-1
       - name: Deploy to S3 bucket
-        run: aws s3 sync ./build/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+        run: aws s3 sync ./dist/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
         env:
