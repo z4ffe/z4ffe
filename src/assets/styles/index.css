@@ -3,3 +3,7 @@
     height: 80vh;
     -webkit-font-smoothing: antialiased;
 }
+
+.close-button {
+    display: none;
+}

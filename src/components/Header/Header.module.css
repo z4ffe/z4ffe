@@ -1,6 +1,6 @@
 @font-face {
   font-family: Incompleeta;
-  src: url("../../fonts/IncompleetaRegular.ttf");
+  src: url("../../assets/fonts/IncompleetaRegular.ttf");
 }
 .header {
   display: flex;
@@ -12,6 +12,7 @@
   padding: 0;
   margin: 0;
   letter-spacing: 5px;
+  transition: 0.5s;
 }
 .header .title a {
   user-select: none;
@@ -19,6 +20,12 @@
   color: #CC2D42;
   text-shadow: 8px -8px 1px rgba(17, 22, 126, 0.79);
   text-decoration: none;
+}
+.header .title_hide {
+  opacity: 0;
+}
+.header .title_hide a {
+  display: none;
 }
 .header .menu {
   display: none;

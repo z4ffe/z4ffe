@@ -1,0 +1,45 @@
+#container {
+  position: relative;
+  font-family: "Lucida Grande", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: 0.1s;
+}
+#container canvas {
+  display: flex;
+}
+#container .header-container {
+  position: absolute;
+  left: 34%;
+  top: 45%;
+  width: 100%;
+}
+#container .header-container h1 {
+  color: white;
+  margin: 0 auto;
+  line-height: 0.1rem;
+}
+#container .header-container h2 {
+  margin-left: 14.7rem;
+  color: white;
+  font-size: 12px;
+  line-height: 0.1rem;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  #container .header-container {
+    left: 0;
+    top: 50%;
+    width: 100%;
+  }
+  #container .header-container h1 {
+    line-height: normal;
+    text-align: center;
+  }
+  #container .header-container h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=perlin.css.map */
