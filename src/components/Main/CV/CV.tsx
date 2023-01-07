@@ -17,42 +17,45 @@ const CV = () => {
              </div>
              <div className={styles.border}></div>
              <h2>Summary:</h2>
-             <p>Junior web-developer with 1 year IT Freelance experience. Willing to learn and grow in a collaborative
-                team environment. Skilled in HTML, CSS/SCSS, JavaScript. Moderate knowledge of React/Redux/Node.js and
-                PostgreSQL/MongoDB.</p>
+             <p>Junior Full-Stack Developer with 1-year experience creating single-page application using MERN Stack. I have a strong
+                foundation in front-end and back-end web development. I have experience building user-facing web
+                applications using React and Redux, as well as developing server-side logic and integrating APIs using
+                Node.JS and Express. I am proficient in using a variety of databases, including both SQL and NoSQL, and
+                have experience with ORM/ODM libraries like Sequelize and Mongoose. I am dedicated to constantly
+                learning and improving my skills, and am eager to take on new challenges and expand my knowledge.</p>
              <div className={styles.border}></div>
              <h2>Skill Highlights:</h2>
              <ul>
-                <li>Intermediate level of HTML, CSS, SASS/SCSS, BEM and JS ES6+</li>
-                <li>Basic knowledge of React/Redux, Node.JS and PostgreSQL/MongoDB.</li>
-                <li>Intermediate skills of MS Office suite & Photoshop.</li>
-                <li>Time Management, Teamwork, Adaptability, Open mindedness and Self-taught</li>
+                <li>HTML5, CSS3, JS ES6+, React, Redux, REST API</li>
+                <li>Node.JS, Express, Mongoose, Sequelize, MongoDB, MySQL, PostgreSQL</li>
+                <li>Git, AWS Route53, Cloudfront, S3, EC2, Lambda, CI/CD</li>
+                <li>Self-taught, Teamwork, Time Management, Adaptability, Open mindedness</li>
              </ul>
              <div className={styles.border}></div>
              <h2>Experience:</h2>
              <ul>
-                <li>IT Freelance - 2021 to 2022</li>
-                <li>MASA Web development - 2022</li>
+                <li>SueApp - Full-Stack Developer - 2022 to Present</li>
+                <li>Freelance - 2021 to Present</li>
              </ul>
              <div className={styles.border}></div>
              <h2>Education:</h2>
              <ul>
+                <li>MASA Web-Development - 2022</li>
+                <li>RS School Web-Development - 2021</li>
                 <li>qBasic & Visual Basic courses - 2000</li>
-                <li>Web-Development courses - 2021</li>
-                <li>MASA Web-Development</li>
              </ul>
              <div className={styles.border}></div>
              <h2>Languages:</h2>
              <ul>
                 <li>Russian – Native</li>
                 <li>English – Professional working proficiency</li>
+                <li>Hebrew - Elementary proficiency</li>
              </ul>
              <div className={styles.border}></div>
              <h2>Hobby and Activities:</h2>
              <ul>
                 <li>IT & Hardware</li>
-                <li>Scientific literature</li>
-                <li>Financial market</li>
+                <li>Financial markets</li>
                 <li>Electric guitar</li>
                 <li>Running/Tennis</li>
                 <li>Motorsport</li>

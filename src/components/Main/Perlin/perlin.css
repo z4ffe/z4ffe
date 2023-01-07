@@ -4,29 +4,35 @@
   user-select: none;
   -webkit-user-select: none;
   transition: 0.1s;
+  transform: scale(140%) translateY(-5%);
 }
 #container canvas {
-  display: flex;
+  display: block;
 }
 #container .header-container {
   position: absolute;
   left: 34%;
   top: 45%;
-  width: 100%;
 }
 #container .header-container h1 {
+  font-size: 1.5rem;
   color: white;
   margin: 0 auto;
+  z-index: 999;
   line-height: 0.1rem;
 }
 #container .header-container h2 {
-  margin-left: 14.7rem;
+  margin-left: 11rem;
+  text-align: center;
   color: white;
-  font-size: 12px;
+  font-size: 0.7rem;
   line-height: 0.1rem;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+  #container {
+    transform: none;
+  }
   #container .header-container {
     left: 0;
     top: 50%;
@@ -37,8 +43,10 @@
     text-align: center;
   }
   #container .header-container h2 {
+    line-height: normal;
     text-align: center;
     margin: 0 auto;
+    font-size: 12px;
   }
 }
 

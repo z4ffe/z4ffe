@@ -4,7 +4,7 @@ import './perlin.scss'
 
 
 const Perlin = () => {
-   const canvas: any = useRef()
+   const canvas = useRef<HTMLDivElement>(null)
 
    useEffect(() => {
       init()
@@ -12,8 +12,8 @@ const Perlin = () => {
    }, [])
 
    const handleMouseMove = (e: any) => {
-      canvas.current.style.left = `${(e.clientY) / 1700}rem`
-      canvas.current.style.top = `${(e.clientX) / 1700}rem`
+      canvas.current!.style.left = `${(e.clientY) / 1700}rem`
+      canvas.current!.style.top = `${(e.clientX) / 1700}rem`
    }
 
    useEffect(() => {
