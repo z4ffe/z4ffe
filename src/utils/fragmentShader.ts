@@ -1,4 +1,4 @@
-export const fragmentShader = `varying float qnoise;
+export const fragmentShader: string = `varying float qnoise;
 
   uniform float time;
   uniform bool redhell;

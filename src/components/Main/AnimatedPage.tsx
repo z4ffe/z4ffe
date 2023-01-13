@@ -1,22 +1,30 @@
-import React from 'react';
-import {motion} from "framer-motion";
+import {motion} from 'framer-motion';
+import React, {ReactNode} from 'react';
 
-const animation:any = {
+interface IAnimation {
+   initial: { opacity: number, y: number },
+   animate: { opacity: number, y: number },
+   exit: { opacity: number, y: number }
+}
+
+type AnimatedPageType = { children: ReactNode; }
+
+const animation: IAnimation  = {
    initial: {opacity: 0, y: -100},
    animate: {opacity: 1, y: 0},
    exit: {opacity: 0, y: 100}
 }
 
-const AnimatedPage = ({children}:any) => {
+const AnimatedPage = ({children}: AnimatedPageType) => {
    return (
-       <motion.div
-           variants={animation}
-           initial='initial'
-           animate='animate'
-           exit='exit'
-       >
-          {children}
-       </motion.div>
+	   <motion.div
+		   variants={animation as any}
+		   initial="initial"
+		   animate="animate"
+		   exit="exit"
+	   >
+		  {children}
+	   </motion.div>
    );
 };
 

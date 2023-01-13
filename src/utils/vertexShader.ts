@@ -1,4 +1,4 @@
-export const vertexShader = `vec3 mod289(vec3 x)
+export const vertexShader: string = `vec3 mod289(vec3 x)
   {
     return x - floor(x * (1.0 / 289.0)) * 289.0;
   }

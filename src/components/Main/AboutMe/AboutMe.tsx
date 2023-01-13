@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './AboutMe.module.css'
+import styles from './AboutMe.module.scss'
 import AnimatedPage from "../AnimatedPage";
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
    return (
        <AnimatedPage>
           <div className={styles.aboutme}>

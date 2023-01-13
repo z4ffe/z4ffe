@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './CV.module.css'
+import styles from './CV.module.scss'
 import AnimatedPage from "../AnimatedPage";
 
-const CV = () => {
+const CV: React.FC = () => {
    return (
        <AnimatedPage>
           <div className={styles.cv}>

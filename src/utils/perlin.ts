@@ -1,18 +1,18 @@
-import {vertexShader} from "./vertexShader.js";
-import {fragmentShader} from "./fragmentShader.js";
+import {fragmentShader} from './fragmentShader.js';
+import {vertexShader} from './vertexShader.js';
 
-function init() {
+function init(): void {
    createWorld();
    createPrimitive();
    animation();
 }
 
-const Theme = {_darkred: 0x100C31}
+const background: number = 0x100C31
 
 
-let scene, camera, renderer, container;
-let start = Date.now();
-let _width, _height;
+let scene: any, camera: any, renderer: any, container: HTMLElement | null;
+let start: number = Date.now();
+let _width: number, _height: number;
 
 function createWorld() {
    if (window.innerWidth < 767) {
@@ -23,13 +23,13 @@ function createWorld() {
 	  _height = window.innerHeight / 1.5;
    }
    scene = new THREE.Scene();
-   scene.background = new THREE.Color(Theme._darkred);
+   scene.background = new THREE.Color(background);
    camera = new THREE.PerspectiveCamera(55, _width / _height, 1, 1000);
    camera.position.z = 12;
    renderer = new THREE.WebGLRenderer({antialias: true, alpha: false});
    renderer.setSize(_width, _height);
-   container = document.getElementById("container");
-   container.appendChild(renderer.domElement);
+   container = document.getElementById('container');
+   container!.appendChild(renderer.domElement);
    window.addEventListener('resize', onWindowResize, false);
 }
 
@@ -47,25 +47,36 @@ function onWindowResize() {
 }
 
 
-let mat;
-const primitiveElement = function () {
+interface IUniforms {
+   time: { type: string, value: number },
+   pointscale: { type: string, value: number },
+   decay: { type: string, value: number },
+   complex: { type: string, value: number },
+   waves: { type: string, value: number },
+   eqcolor: { type: string, value: number },
+   fragment: { type: string, value: boolean },
+   redhell: { type: string, value: boolean }
+}
+
+let mat: any;
+const primitiveElement = function (this: any): void {
    this.mesh = new THREE.Object3D();
    mat = new THREE.ShaderMaterial({
 	  wireframe: false,
-	  //fog: true,
-	  uniforms: {
-		 time: {type: "f", value: 0.0},
-		 pointscale: {type: "f", value: 0.0},
-		 decay: {type: "f", value: 0.0},
-		 complex: {type: "f", value: 0.0},
-		 waves: {type: "f", value: 0.0},
-		 eqcolor: {type: "f", value: 0.0},
-		 fragment: {type: "i", value: true},
-		 redhell: {type: "i", value: true}
+	  uniforms:<IUniforms | any> {
+		 time: {type: 'f', value: 0.0},
+		 pointscale: {type: 'f', value: 0.0},
+		 decay: {type: 'f', value: 0.0},
+		 complex: {type: 'f', value: 0.0},
+		 waves: {type: 'f', value: 0.0},
+		 eqcolor: {type: 'f', value: 0.0},
+		 fragment: {type: 'i', value: true},
+		 redhell: {type: 'i', value: true}
 	  },
 	  vertexShader: vertexShader,
 	  fragmentShader: fragmentShader
    });
+   // @ts-ignore
    let geo = new THREE.IcosahedronBufferGeometry(3, 7);
    let mesh = new THREE.Points(geo, mat);
 
@@ -73,9 +84,10 @@ const primitiveElement = function () {
    this.mesh.add(mesh);
 }
 
-let _primitive;
+let _primitive: any;
 
-function createPrimitive() {
+function createPrimitive(): void {
+   // @ts-ignore
    _primitive = new primitiveElement();
    scene.add(_primitive.mesh);
 }

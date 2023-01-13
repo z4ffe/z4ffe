@@ -1,37 +1,39 @@
 import React, {useEffect, useRef} from 'react';
-import init, {clearCanvas} from '../../../utils/perlin.js'
-import './perlin.scss'
+import init, {clearCanvas} from '../../../utils/perlin'
+import styles from './Perlin.module.scss'
 
 
-const Perlin = () => {
+const Perlin: React.FC = () => {
    const canvas = useRef<HTMLDivElement>(null)
 
-   useEffect(() => {
-      init()
-      return () => clearCanvas()
-   }, [])
 
-   const handleMouseMove = (e: any) => {
-      canvas.current!.style.left = `${(e.clientY) / 1700}rem`
-      canvas.current!.style.top = `${(e.clientX) / 1700}rem`
+   const handleMouseMove = (event: MouseEvent) => {
+	  canvas.current!.style.left = `${(event.clientY) / 2000}rem`
+	  canvas.current!.style.top = `${(event.clientX) / 2000}rem`
    }
 
    useEffect(() => {
-      window.addEventListener('mousemove', handleMouseMove)
-      return () => {
-         window.removeEventListener('mousemove', handleMouseMove)
-      }
+	  init()
+	  return (): void => clearCanvas()
+   }, [])
+
+
+   useEffect(() => {
+	  window.addEventListener('mousemove', handleMouseMove)
+	  return (): void => {
+		 window.removeEventListener('mousemove', handleMouseMove)
+	  }
    }, [])
 
    return (
-       <>
-          <div id="container" ref={canvas}>
-             <div className="header-container">
-                <h2>Full-Stack Developer</h2>
-                <h1>Pavel Kuliasov</h1>
-             </div>
-          </div>
-       </>
+	   <>
+		  <div className={styles.container} id="container" ref={canvas}>
+			 <div className={styles.header__container}>
+				<h2 className={styles.header__desc}>Full-Stack Developer</h2>
+				<h1 className={styles.header}>Pavel Kuliasov</h1>
+			 </div>
+		  </div>
+	   </>
    );
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import Perlin from "./Perlin/Perlin";
 import AnimatedPage from "./AnimatedPage";
-import styles from './Main.module.css'
+import styles from './Main.module.scss'
 
-const Main = () => {
+const Main: React.FC = () => {
    return (
        <AnimatedPage>
           <div className={styles.main}>

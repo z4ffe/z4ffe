@@ -1,21 +1,38 @@
-import React, {useEffect, useRef, useState} from 'react';
-import styles from "./Cell.module.css"
+import React from 'react';
+import styles from "./Cell.module.scss"
 
-const Cell = (props: any) => {
-   const wrapperOpacityOn = (e: any, img: string) => {
-      e.currentTarget.style.opacity = 1
+interface IData {
+   data: {
+      title: string
+      desc: string,
+      img: string,
+      github: string,
+      pages: string,
+      html: boolean,
+      sass: boolean,
+      bootstrap: boolean,
+      js: boolean,
+      react: boolean,
+      node: boolean,
+      db: boolean
+   }
+}
+
+const Cell: React.FC<IData> = (props) => {
+   const wrapperOpacityOn = (e: React.SyntheticEvent<HTMLDivElement>, img: string) => {
+      e.currentTarget.style.opacity = '1'
       e.currentTarget.style.backgroundImage = `linear-gradient(to bottom, rgba(16, 20, 110, 0.8), rgba(204, 45, 66, 0.2)), url(${img})`
       e.currentTarget.style.backgroundSize = 'cover'
    }
-   const wrapperOpacityOff = (e: any) => e.currentTarget.style.opacity = 0
+   const wrapperOpacityOff = (e: React.SyntheticEvent<HTMLDivElement>) => e.currentTarget.style.opacity = '0'
 
    return (
-       <div>
+       <>
           <a href={props.data.pages} target="_blank">
              <div className={styles.cell}
                   style={{backgroundImage: `url(${props.data.img})`}}>
-                <div className={styles.cell__wrapper} onMouseOver={(e: any) => wrapperOpacityOn(e, props.data.img)}
-                     onMouseLeave={(e: any) => wrapperOpacityOff(e)}>
+                <div className={styles.cell__wrapper} onMouseOver={(e: React.SyntheticEvent<HTMLDivElement>) => wrapperOpacityOn(e, props.data.img)}
+                     onMouseLeave={(e: React.SyntheticEvent<HTMLDivElement>) => wrapperOpacityOff(e)}>
                    <h2 className={styles.cell__title}>{props.data.title}</h2>
                    <div className={styles.cell__links}>
                       <div className={styles.stack}>
@@ -35,7 +52,7 @@ const Cell = (props: any) => {
                 </div>
              </div>
           </a>
-       </div>
+       </>
    );
 };
 

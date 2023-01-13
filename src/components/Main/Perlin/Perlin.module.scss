@@ -1,21 +1,20 @@
-#container {
+.container {
   position: relative;
   font-family: 'Lucida Grande', sans-serif;
   user-select: none;
   -webkit-user-select: none;
-  transition: 0.1s;
   transform: scale(140%) translateY(-5%);
 
   canvas {
     display: block;
   }
 
-  .header-container {
+  .header__container {
     position: absolute;
     left: 34%;
     top: 45%;
 
-    h1 {
+    .header {
       font-size: 1.5rem;
       color: white;
       margin: 0 auto;
@@ -23,7 +22,7 @@
       line-height: .1rem;
     }
 
-    h2 {
+    .header__desc {
       margin-left: 11rem;
       text-align: center;
       color: white;
@@ -35,25 +34,27 @@
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
-  #container {
+  .container {
     transform: none;
 
     canvas {
     }
-    .header-container {
+
+    .header__container {
       left: 0;
       top: 50%;
       width: 100%;
 
-      h1 {
+      .header {
         line-height: normal;
         text-align: center;
       }
 
-      h2 {
-        line-height: normal;
+      .header__desc {
+        line-height: 0.3rem;
         text-align: center;
         margin: 0 auto;
+        padding-right: .22rem;
         font-size: 12px;
       }
     }
