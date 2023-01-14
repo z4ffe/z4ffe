@@ -1,6 +1,6 @@
 [
   {
-    "title": "Tech News",
+    "title": "Tech News | MERN Stack",
     "desc": "",
     "img": "/img/portfolio/tech-news.png",
     "github": "https://github.com/z4ffe/tech-news",
@@ -10,11 +10,11 @@
     "bootstrap": true,
     "js": true,
     "react": true,
-    "node": false,
-    "db": false
+    "node": true,
+    "db": true
   },
   {
-    "title": "Todo App - MERN",
+    "title": "Todo App | MERN Stack",
     "desc": "",
     "img": "/img/portfolio/todo-list.png",
     "github": "https://github.com/z4ffe/todo-app",
