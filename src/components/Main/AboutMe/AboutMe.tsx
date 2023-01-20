@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './AboutMe.module.scss'
 import AnimatedPage from "../AnimatedPage";
 
-const AboutMe: React.FC = () => {
+const AboutMe: React.FC = (): JSX.Element => {
    return (
        <AnimatedPage>
           <div className={styles.aboutme}>

@@ -1,24 +1,9 @@
 import React from 'react';
+import {useMediaQuery} from 'react-responsive';
+import {IData} from '../../../../types/component.interfaces';
 import styles from "./Cell.module.scss"
 
-interface IData {
-   data: {
-      title: string
-      desc: string,
-      img: string,
-      github: string,
-      pages: string,
-      html: boolean,
-      sass: boolean,
-      bootstrap: boolean,
-      js: boolean,
-      react: boolean,
-      node: boolean,
-      db: boolean
-   }
-}
-
-const Cell: React.FC<IData> = (props) => {
+const Cell: React.FC<IData> = (props): JSX.Element => {
    const wrapperOpacityOn = (e: React.SyntheticEvent<HTMLDivElement>, img: string) => {
       e.currentTarget.style.opacity = '1'
       e.currentTarget.style.backgroundImage = `linear-gradient(to bottom, rgba(16, 20, 110, 0.8), rgba(204, 45, 66, 0.2)), url(${img})`
@@ -26,11 +11,13 @@ const Cell: React.FC<IData> = (props) => {
    }
    const wrapperOpacityOff = (e: React.SyntheticEvent<HTMLDivElement>) => e.currentTarget.style.opacity = '0'
 
+   const isDesktop: boolean = useMediaQuery({query: '(max-width: 767px)'})
+
    return (
        <>
           <a href={props.data.pages} target="_blank">
              <div className={styles.cell}
-                  style={{backgroundImage: `url(${props.data.img})`}}>
+                  style={{backgroundImage: isDesktop ? `linear-gradient(to bottom, rgba(16, 20, 110, 0.8), rgba(204, 45, 66, 0.2)), url(${props.data.img})` : `url(${props.data.img})`}}>
                 <div className={styles.cell__wrapper} onMouseOver={(e: React.SyntheticEvent<HTMLDivElement>) => wrapperOpacityOn(e, props.data.img)}
                      onMouseLeave={(e: React.SyntheticEvent<HTMLDivElement>) => wrapperOpacityOff(e)}>
                    <h2 className={styles.cell__title}>{props.data.title}</h2>

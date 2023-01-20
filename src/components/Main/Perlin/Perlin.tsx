@@ -1,20 +1,25 @@
-import React, {useEffect, useRef} from 'react';
+import React, {RefObject, useEffect, useRef} from 'react';
+import {useMediaQuery} from 'react-responsive';
 import init, {clearCanvas} from '../../../utils/perlin'
 import styles from './Perlin.module.scss'
 
 
-const Perlin: React.FC = () => {
-   const canvas = useRef<HTMLDivElement>(null)
-
+const Perlin: React.FC = (): JSX.Element => {
+   const canvas: RefObject<HTMLDivElement> = useRef(null)
+   const mobile: boolean = useMediaQuery({query: '(max-width: 767px)'})
 
    const handleMouseMove = (event: MouseEvent) => {
-	  canvas.current!.style.left = `${(event.clientY) / 2000}rem`
-	  canvas.current!.style.top = `${(event.clientX) / 2000}rem`
+	  if (canvas.current && !mobile) {
+		 canvas.current.style.left = `${(event.clientY) / 2000}rem`
+		 canvas.current.style.top = `${(event.clientX) / 2000}rem`
+	  }
    }
 
    useEffect(() => {
-	  init()
-	  return (): void => clearCanvas()
+	  init(canvas)
+	  return (): void => {
+		 clearCanvas()
+	  }
    }, [])
 
 
@@ -23,17 +28,15 @@ const Perlin: React.FC = () => {
 	  return (): void => {
 		 window.removeEventListener('mousemove', handleMouseMove)
 	  }
-   }, [])
+   }, [canvas, !mobile])
 
    return (
-	   <>
-		  <div className={styles.container} id="container" ref={canvas}>
-			 <div className={styles.header__container}>
-				<h2 className={styles.header__desc}>Full-Stack Developer</h2>
-				<h1 className={styles.header}>Pavel Kuliasov</h1>
-			 </div>
+	   <div className={styles.container} ref={canvas}>
+		  <div className={styles.header__container}>
+			 <h2 className={styles.header__desc}>Full-Stack Developer</h2>
+			 <h1 className={styles.header}>Pavel Kuliasov</h1>
 		  </div>
-	   </>
+	   </div>
    );
 };
 

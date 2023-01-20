@@ -2,7 +2,7 @@ import React from 'react';
 import AnimatedPage from '../AnimatedPage';
 import styles from './TechStack.module.scss'
 
-const TechStack: React.FC = () => {
+const TechStack: React.FC = (): JSX.Element => {
    return (
 	   <AnimatedPage>
 		  <div className={styles.techstack}>

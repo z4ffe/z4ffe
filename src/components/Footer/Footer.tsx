@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss'
 
-const Footer: React.FC = () => {
+const Footer: React.FC = (): JSX.Element => {
    return (
        <div className={styles.footer}>
           <ul>

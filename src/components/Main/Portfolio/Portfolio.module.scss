@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, 400px);
   grid-auto-rows: 250px;
   gap: 10px;
+  z-index: -1;
 
   .cell {
     color: whitesmoke;

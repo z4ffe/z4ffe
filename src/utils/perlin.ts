@@ -1,20 +1,20 @@
+import {RefObject} from 'react';
+import {IAnimationOptions, IShaderMaterialOptions} from '../types/perlin.inetrfaces';
 import {fragmentShader} from './fragmentShader.js';
 import {vertexShader} from './vertexShader.js';
 
-function init(): void {
-   createWorld();
+function init(canvas: RefObject<HTMLDivElement>): void {
+   createWorld(canvas);
    createPrimitive();
    animation();
 }
 
 const background: number = 0x100C31
-
-
-let scene: any, camera: any, renderer: any, container: HTMLElement | null;
+let scene: any, camera: any, renderer: any;
 let start: number = Date.now();
 let _width: number, _height: number;
 
-function createWorld() {
+function createWorld(canvas: RefObject<HTMLDivElement>) {
    if (window.innerWidth < 767) {
 	  _width = window.innerWidth;
 	  _height = window.innerHeight / 1.2;
@@ -28,8 +28,7 @@ function createWorld() {
    camera.position.z = 12;
    renderer = new THREE.WebGLRenderer({antialias: true, alpha: false});
    renderer.setSize(_width, _height);
-   container = document.getElementById('container');
-   container!.appendChild(renderer.domElement);
+   if (canvas.current) canvas.current.appendChild(renderer.domElement)
    window.addEventListener('resize', onWindowResize, false);
 }
 
@@ -46,24 +45,12 @@ function onWindowResize() {
    camera.updateProjectionMatrix();
 }
 
-
-interface IUniforms {
-   time: { type: string, value: number },
-   pointscale: { type: string, value: number },
-   decay: { type: string, value: number },
-   complex: { type: string, value: number },
-   waves: { type: string, value: number },
-   eqcolor: { type: string, value: number },
-   fragment: { type: string, value: boolean },
-   redhell: { type: string, value: boolean }
-}
-
 let mat: any;
 const primitiveElement = function (this: any): void {
    this.mesh = new THREE.Object3D();
-   mat = new THREE.ShaderMaterial({
+   mat = new THREE.ShaderMaterial(<IShaderMaterialOptions>{
 	  wireframe: false,
-	  uniforms:<IUniforms | any> {
+	  uniforms: {
 		 time: {type: 'f', value: 0.0},
 		 pointscale: {type: 'f', value: 0.0},
 		 decay: {type: 'f', value: 0.0},
@@ -93,7 +80,7 @@ function createPrimitive(): void {
 }
 
 
-const options = {
+const options: IAnimationOptions = {
    perlin: {
 	  vel: 0.002,
 	  speed: 0.0002,

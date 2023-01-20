@@ -3,7 +3,7 @@ import Perlin from "./Perlin/Perlin";
 import AnimatedPage from "./AnimatedPage";
 import styles from './Main.module.scss'
 
-const Main: React.FC = () => {
+const Main: React.FC = (): JSX.Element => {
    return (
        <AnimatedPage>
           <div className={styles.main}>

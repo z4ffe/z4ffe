@@ -4,7 +4,7 @@ import data from '../../../assets/data/portfolio.json'
 import Cell from "./Cell/Cell";
 import React from "react";
 
-const Portfolio: React.FC = () => {
+const Portfolio: React.FC = (): JSX.Element => {
    const allCells: Array<JSX.Element> = data.map((el, id) => (<Cell key={id} data={el}/>))
 
    return (

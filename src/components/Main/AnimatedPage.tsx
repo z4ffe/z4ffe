@@ -15,7 +15,7 @@ const animation: IAnimation  = {
    exit: {opacity: 0, y: 100}
 }
 
-const AnimatedPage = ({children}: AnimatedPageType) => {
+const AnimatedPage = ({children}: AnimatedPageType): JSX.Element => {
    return (
 	   <motion.div
 		   variants={animation as any}

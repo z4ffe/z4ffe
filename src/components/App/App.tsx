@@ -1,6 +1,7 @@
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import HouseIcon from '@mui/icons-material/House';
+import MenuIcon from '@mui/icons-material/Menu';
 import NextWeekIcon from '@mui/icons-material/NextWeek';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import {Box, Drawer} from '@mui/material';
@@ -16,25 +17,26 @@ import CV from '../Main/CV/CV';
 import Main from '../Main/Main'
 import Portfolio from '../Main/Portfolio/Portfolio';
 import TechStack from '../Main/TechStack/TechStack';
+import BurgerIcon from '../misc/BurgerIcon';
 import Navigation from '../Navigation/Navigation';
 import styles from './App.module.scss'
 
-const App: React.FC = () => {
+const App: React.FC = (): JSX.Element => {
    const [menu, setMenu] = useState<boolean>(false)
    const mobile: boolean = useMediaQuery({query: '(max-width: 767px)'})
 
    const menuHandler = (): void => setMenu(!menu)
 
-
    return (
 	   <BrowserRouter>
+		  {mobile && <BurgerIcon menu={menu} menuHandler={menuHandler}/>}
 		  <div className={styles.wrapper}>
 			 <div className={styles.menu}>
-				<Header menu={menuHandler}/>
+				<Header/>
 				<Navigation/>
 				<Footer/>
 			 </div>
-			 {mobile && <Header menu={menuHandler}/>}
+			 {mobile && <Header/>}
 			 <div className={styles.content}>
 				<Routes>
 				   <Route path="/" index element={<Main/>}></Route>
@@ -47,13 +49,13 @@ const App: React.FC = () => {
 			 </div>
 			 {mobile && <Footer/>}
 		  </div>
-		  <Drawer anchor={'right'} open={menu} onClose={(): void => setMenu(!menu)} transitionDuration={250}
+		  <Drawer anchor={'right'} open={menu} onClose={(): void => setMenu(!menu)} transitionDuration={450}
 				  PaperProps={{
 					 sx: {
 						borderRadius: '0 0 0 10px',
 						backgroundSize: 'cover',
 						backgroundImage: 'linear-gradient(to top, rgba(16,12,49, 0), rgba(16,12,49,1))',
-						backgroundColor: 'transparent'
+						backgroundColor: 'transparent',
 					 }
 				  }}
 		  >

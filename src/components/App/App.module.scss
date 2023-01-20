@@ -6,6 +6,7 @@ body {
   background-color: #100C31;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .wrapper {
@@ -41,6 +42,16 @@ body {
   &:hover {
     color: #D1ED42;
   }
+}
+
+.menu_mobile {
+  top: .5rem;
+  right: .2rem;
+  color: white;
+  position: absolute;
+  z-index: 99999;
+  font-size: 22%;
+  color: rgba(219, 217, 232, .8);
 }
 
 
