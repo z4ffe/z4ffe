@@ -17,7 +17,7 @@ import CV from '../Main/CV/CV';
 import Main from '../Main/Main'
 import Portfolio from '../Main/Portfolio/Portfolio';
 import TechStack from '../Main/TechStack/TechStack';
-import BurgerIcon from '../misc/BurgerIcon';
+import BurgerIcon from '../misc/BurgerIcon/BurgerIcon';
 import Navigation from '../Navigation/Navigation';
 import styles from './App.module.scss'
 
@@ -49,7 +49,7 @@ const App: React.FC = (): JSX.Element => {
 			 </div>
 			 {mobile && <Footer/>}
 		  </div>
-		  <Drawer anchor={'right'} open={menu} onClose={(): void => setMenu(!menu)} transitionDuration={450}
+		  <Drawer anchor={'right'} open={menu} onClose={(): void => setMenu(!menu)} transitionDuration={350}
 				  PaperProps={{
 					 sx: {
 						borderRadius: '0 0 0 10px',

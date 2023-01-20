@@ -3,10 +3,6 @@ import styles from './Header.module.scss'
 import {Link, useLocation} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 
-type Props = {
-   menu: (event: React.SyntheticEvent) => void;
-}
-
 const Header: React.FC = (): JSX.Element => {
    const isDesktop: boolean = useMediaQuery({minWidth: '767px'})
    const location = useLocation()
