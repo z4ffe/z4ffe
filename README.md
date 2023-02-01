@@ -1,5 +1,5 @@
 <h1 align="center">FS from Saint-Petersburg</h1>
-<p align="center"><b>MERN<br>react, typescript, nodejs, nest/express, mongodb/postgresql</b></p>
+<p align="center"><b>MERN/PERN<br>react, typescript, nodejs, nest/express, mongodb/postgresql</b></p>
 <h2></h2>
 <div align="center">
  <img align="center" width="15" height="15" src="https://static.vecteezy.com/system/resources/previews/013/331/127/original/account-avatar-dark-mode-glyph-ui-icon-personal-page-of-site-user-user-interface-design-white-silhouette-symbol-on-black-space-solid-pictogram-for-web-mobile-isolated-illustration-vector.jpg">
