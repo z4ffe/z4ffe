@@ -1,5 +1,19 @@
 [
   {
+    "title": "React DnD Calculator Constructor",
+    "desc": "",
+    "img": "/img/portfolio/calc-dnd.png",
+    "github": "https://github.com/z4ffe/calc-dnd",
+    "pages": "https://capable-lily-04b132.netlify.app",
+    "html": false,
+    "sass": false,
+    "bootstrap": false,
+    "js": false,
+    "react": true,
+    "node": false,
+    "db": false
+  },
+  {
     "title": "Tech News | MERN Stack",
     "desc": "",
     "img": "/img/portfolio/tech-news.png",
