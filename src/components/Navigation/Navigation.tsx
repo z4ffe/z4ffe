@@ -1,18 +1,28 @@
-import React from 'react';
-import {NavLink} from "react-router-dom";
+import React from 'react'
+import {NavLink} from 'react-router-dom'
+import {pages} from '../../assets/data/pages'
 import styles from './Navigation.module.scss'
 
-const Navigation: React.FC = () => {
-   return (
-          <div className={styles.nav}>
-             <ul>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : null} to='/about-me'>About me</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : null} to='/cv'>CV</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : null} to='/portfolio'>Portfolio</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : null} to='/stack'>Tech stack</NavLink></li>
-             </ul>
-          </div>
-   );
-};
+export const Navigation = () => {
+	const navElements = () => pages.map(page => {
+		if (page.title !== 'Home') {
+			return (
+				<li key={page.title}>
+					<NavLink
+						className={({isActive}) => isActive ? styles.active : null}
+						to={page.link}>
+						{page.title}
+					</NavLink>
+				</li>)
+		}
+	})
 
-export default Navigation;
+
+	return (
+		<div className={styles.nav}>
+			<ul>
+				{navElements()}
+			</ul>
+		</div>
+	)
+}

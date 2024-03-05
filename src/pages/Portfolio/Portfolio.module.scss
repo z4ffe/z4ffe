@@ -1,0 +1,42 @@
+.portfolio {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 400px);
+  grid-auto-rows: 250px;
+  gap: 10px;
+  z-index: -1;
+  padding-right: 5%;
+  margin-bottom: 5%;
+
+
+  .cell {
+    color: whitesmoke;
+    height: 250px;
+  }
+}
+
+
+@media only screen and (max-width: 850px) {
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 2%;
+    padding-right: 0;
+    margin-bottom: 5%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .portfolio {
+    grid-template-columns: repeat(1, 400px);
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .portfolio {
+    grid-template-columns: repeat(3, 400px);
+  }
+}
+
