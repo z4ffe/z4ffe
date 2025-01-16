@@ -1,8 +1,39 @@
 .aboutme {
   display: flex;
   flex-direction: column;
-  margin-top: 13%;
+  margin-top: 70px;
   font-family: 'Poppins', sans-serif;
+
+  a {
+    text-decoration: none;
+    color: rgba(219, 217, 232, .8);
+    transition: .3s;
+    border-bottom: 1px solid transparent;
+
+
+    &:hover {
+      color: white;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  ul {
+    margin: 20px 0;
+    padding: 0 0 0 30px;
+  }
 
   .text {
     color: rgba(219, 217, 232, .8);
@@ -22,6 +53,11 @@
   .aboutme {
     padding: 0 .5rem;
     margin: 2rem auto;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
     .text {
       text-align: center;

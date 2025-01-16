@@ -21,7 +21,8 @@ function createWorld(canvas: RefObject<HTMLDivElement>) {
 	if (window.innerWidth < mobileWidth) {
 		_width = window.innerWidth
 		_height = window.innerHeight / 1.2
-	} else {
+	}
+	else {
 		_width = window.innerWidth / 2.5
 		_height = window.innerHeight / 1.5
 	}
@@ -30,7 +31,7 @@ function createWorld(canvas: RefObject<HTMLDivElement>) {
 	camera = new THREE.PerspectiveCamera(55, _width / _height, 1, 1000)
 	camera.position.z = 12
 	renderer = new THREE.WebGLRenderer({antialias: true, alpha: false})
-	renderer.setPixelRatio(1.4)
+	renderer.setPixelRatio(1.2)
 	controls = new OrbitControls(camera, renderer.domElement)
 	controls.enableZoom = false
 	renderer.setSize(_width, _height)
@@ -42,7 +43,8 @@ function onWindowResize() {
 	if (window.innerWidth < mobileWidth) {
 		_width = window.innerWidth
 		_height = window.innerHeight / 1.2
-	} else {
+	}
+	else {
 		_width = window.innerWidth / 2.5
 		_height = window.innerHeight / 1.5
 	}
@@ -52,7 +54,7 @@ function onWindowResize() {
 }
 
 let mat: any
-const primitiveElement = function (this: any) {
+const primitiveElement = function(this: any) {
 	this.mesh = new THREE.Object3D()
 	mat = new THREE.ShaderMaterial(material)
 	const geo = new THREE.IcosahedronBufferGeometry(3, 7)

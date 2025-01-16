@@ -19,12 +19,13 @@ export const PortfolioCard: FC<IPortfolioWork> = ({data}) => {
 	}
 
 	return (
-		<a className={styles.portfolioCard__link} href={data.deploy} target='_blank'>
+		<div className={styles.portfolioCard__link}>
 			<div className={styles.portfolioCard}
 				  style={{backgroundImage: isMobile ? `linear-gradient(to bottom, rgba(16, 20, 110, 0.8), rgba(204, 45, 66, 0.2)), url(${data.img})` : `url(${data.img})`}}>
 				<div className={styles.portfolioCard__wrapper}
 					  onMouseOver={(event) => wrapperOpacityOn(event, data.img)}
 					  onMouseLeave={(event) => wrapperOpacityOff(event)}>
+					<a className={styles.portfolioCard__link} href={data.deploy} target='_blank'></a>
 					<h2 className={styles.portfolioCard__title}>{data.title}</h2>
 					<p className={styles.portfolioCard__desc}>{data.desc}</p>
 					<div className={styles.portfolioCard__links}>
@@ -36,13 +37,15 @@ export const PortfolioCard: FC<IPortfolioWork> = ({data}) => {
 							{data.node && <i className='fa-brands fa-node-js fa-xl'></i>}
 							{data.db && <i className='fa-solid fa-database fa-xl'></i>}
 						</div>
-						<div className={styles.links}><a href={data.github} target='_blank'><i
-							className='fa-brands fa-github fa-xl'></i></a>
+						<div className={styles.links}>
+							<a href={data.github} target='_blank'><i
+								className='fa-brands fa-github fa-xl'></i></a>
 							<a href={data.deploy} target='_blank'><i
-								className='fa-solid fa-arrow-up-right-from-square fa-xl'></i></a></div>
+								className='fa-solid fa-arrow-up-right-from-square fa-xl'></i></a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</a>
+		</div>
 	)
 }
