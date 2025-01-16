@@ -30,7 +30,7 @@ function createWorld(canvas: RefObject<HTMLDivElement>) {
 	scene.background = new THREE.Color(background)
 	camera = new THREE.PerspectiveCamera(55, _width / _height, 1, 1000)
 	camera.position.z = 12
-	renderer = new THREE.WebGLRenderer({antialias: true, alpha: false})
+	renderer = new THREE.WebGLRenderer({antialias: true, alpha: true})
 	renderer.setPixelRatio(1.2)
 	controls = new OrbitControls(camera, renderer.domElement)
 	controls.enableZoom = false
