@@ -9,6 +9,8 @@ export const Navigation = () => {
 			return (
 				<li key={page.title}>
 					<NavLink
+						// @ts-ignore
+						onClick={() => ym(99553814, 'reachGoal', 'btn-click-me')}
 						className={({isActive}) => isActive ? styles.active : null}
 						to={page.link}>
 						{page.title}
