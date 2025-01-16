@@ -65,7 +65,7 @@ const primitiveElement = function(this: any) {
 let _primitive: any
 
 function createPrimitive() {
-	// @ts-ignore
+	// @ts-expect-error "idk lol"
 	_primitive = new primitiveElement()
 	scene.add(_primitive.mesh)
 }

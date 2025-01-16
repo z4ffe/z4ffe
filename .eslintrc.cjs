@@ -14,7 +14,8 @@ module.exports = {
 	plugins: ['react-refresh'],
 	rules: {
 		'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
+		'react-hooks/exhaustive-deps': 0,
 		'no-mixed-spaces-and-tabs': ['off'],
-		'semi': [2, 'never']
+		'semi': [2, 'never'],
 	},
 }
